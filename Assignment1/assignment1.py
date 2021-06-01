@@ -190,6 +190,7 @@ Original file is located at
 
 import numpy as np
 import matplotlib.pyplot as plt
+ 
 
 
 # Python Program to find Angle of  a triangle if two angles are given
@@ -204,18 +205,25 @@ print("Third angle of a triangle =",C)
 
 import numpy as np
 import math
-
-#Calculating c and b
+ 
 A = [[np.sqrt(3)+1,0],[0,np.sqrt(3)+1]]
 B = [14,7*math.sqrt(2)]
 X =np.linalg.solve(A,B)
+
 print(X)
+
+#Triangle sides
+a = 7
+b = 5.12
+c = 3.62
+p = (a**2 + c**2-b**2)/(2*a)
+q = np.sqrt(c**2-p**2)
 
 
 #Triangle vertices
-A = np.array([3.62,3.62]) 
+A = np.array([p,q]) 
 B = np.array([0,0]) 
-C = np.array([7,0]) 
+C = np.array([a,0]) 
 
 
 #Generating all lines
